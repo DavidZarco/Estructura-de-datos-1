@@ -161,7 +161,7 @@ public class Array00 {
         for(int i=0; i < array.length;i++){
             for(int u=i+1;i < array.length;i++){
                 if(array[i]==array[u]){
-                    array[u] = 0;               // LO SETEO A 0, ES DECIR LO QUITO
+                    remove(u);
                 }
             }
         }
