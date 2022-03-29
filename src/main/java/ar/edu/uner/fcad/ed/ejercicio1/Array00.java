@@ -88,13 +88,7 @@ public class Array00 {
         
         return resultado;
     }
-    public double promedio(){
-        for(int i = 0; i < array.length; i++){
-            prom+=array[i];
-        }
-        prom = prom/(array.length);
-        return prom;
-    }
+    
     public void multiplicar(int valorParam){
         for(int i = 0; i < array.length; i++){
             array[i]= array[i]*valorParam;
@@ -128,10 +122,48 @@ public class Array00 {
         aux = array[i];
        array[i] = array[array.length - 1 - i];
         array[array.length - 1 - i] = aux;
-    }
+        }
         System.out.println("El array invertido es:");
-    for (int i = 0; i < array.length;i++) {
-        System.out.print(array[i]+ " ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
+
+    public int maximo() {
+        int max = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if(array[i]>max){
+                max = array[i];
+            }
+        }
+        return max;
+    }
+
+    public int minimo() {
+        int min = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if(array[i]<min){
+                min = array[i];
+            }
+        }
+        return min;
+    }
+
+    public double promedio() {
+        for (int i = 0; i < array.length; i++) {
+            prom += array[i];
+        }
+        prom = prom / (array.length);
+        return prom;
+    }
+    public void quitarRepetidos(){
+        int aux = array[0];
+        for(int i=0; i < array.length;i++){
+            for(int u=i+1;i < array.length;i++){
+                if(array[i]==array[u]){
+                    array[u] = 0;               // LO SETEO A 0, ES DECIR LO QUITO
+                }
+            }
+        }
     }
 }
-} 
