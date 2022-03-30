@@ -15,18 +15,14 @@ public class ClienteArray00 {
         objeto.add(1);
         objeto.add(8);
         objeto.add(10);
-        System.out.println("toString(): " + objeto.toString());
-        
-        
-   
+        System.out.println("Numeros del array: " + objeto.toString());
         System.out.println("Maximo: "+objeto.maximo());
         System.out.println("Minimo: "+objeto.minimo());
         System.out.println("Promedio: "+objeto.promedio());
         System.out.println("Saco los repetidos...");
         objeto.quitarRepetidos();
         System.out.println("Array sin repetidos: "+objeto.toString());
-        
-       
+     
     }
 
     

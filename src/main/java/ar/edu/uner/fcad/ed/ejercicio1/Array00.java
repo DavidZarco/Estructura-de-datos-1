@@ -88,47 +88,6 @@ public class Array00 {
         
         return resultado;
     }
-    
-    public void multiplicar(int valorParam){
-        for(int i = 0; i < array.length; i++){
-            array[i]= array[i]*valorParam;
-            System.out.print(array[i]+ " ") ;
-        }
-    }
-    public void multiplicar2(int [] arrayParam){
-            arrayParam = new int [array.length];
-            for (int i = 0; i < array.length;i++) {
-                arrayParam[i] = (int) (Math.random() *10);
-                array[i] = array[i] * arrayParam[i];
-                System.out.print(array[i] + " ");
-            }   
-        }
-    public boolean todosDistinto(){
-        for (int i = 0; i < array.length;i++) {    
-        for (int j = 0; j < array.length;j++) {
-        if(i!=j && array[i]==array[j]) {
-            System.out.println("El array tiene elementos repetidos:");
-            return false;
-        }
-        }      
-        }
-        System.out.println("El array no tiene elementos repetidos:");
-        return true;
-    }
-    // 
-    public void reverso(){
-        int aux;
-    for (int i = 0; i < array.length / 2; i++) {
-        aux = array[i];
-       array[i] = array[array.length - 1 - i];
-        array[array.length - 1 - i] = aux;
-        }
-        System.out.println("El array invertido es:");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
-    }
-
     public int maximo() {
         int max = array[0];
         for (int i = 0; i < array.length; i++) {
