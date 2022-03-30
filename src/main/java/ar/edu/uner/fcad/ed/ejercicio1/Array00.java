@@ -157,11 +157,12 @@ public class Array00 {
         return prom;
     }
     public void quitarRepetidos(){
-        int aux = array[0];
+        
         for(int i=0; i < array.length;i++){
-            for(int u=i+1;i < array.length;i++){
+            for(int u=(i+1);u < array.length;u++){
                 if(array[i]==array[u]){
-                    remove(u);
+                    this.remove(u);
+                    
                 }
             }
         }
