@@ -1,6 +1,8 @@
 
 package ar.edu.uner.fcad.ed.ejercicio3;
 
+import java.util.Objects;
+
 
 public class Alumno {
     private String nombre, apellido, notaConcep;
@@ -12,6 +14,7 @@ public class Alumno {
         this.examen1 = examen1;
         this.examen2 = examen2;
         this.examen3 = examen3;
+        calcularNotaFinal();
     }
 
     public String getNombre() {
@@ -32,10 +35,6 @@ public class Alumno {
 
     public String getNotaConcep() {
         return notaConcep;
-    }
-
-    public void setNotaConcep(String notaConcep) {
-        this.notaConcep = notaConcep;
     }
 
     public int getExamen1() {
@@ -65,10 +64,47 @@ public class Alumno {
     public int getNotaFinal() {
         return notaFinal;
     }
-
-    public void setNotaFinal(int notaFinal) {
-        this.notaFinal = notaFinal;
+    private void calcularNotaFinal(){
+        double ex1 = Math.ceil(examen1*0.25);
+        double ex2 = Math.ceil(examen2*0.30);
+        double ex3 = Math.ceil(examen3*0.45);
+        notaFinal = (int) (ex1+ex2+ex3);
+        if(examen1==10 && examen2==10 && examen3==10){
+            notaFinal = 10;
+        }
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 67 * hash + Objects.hashCode(this.nombre);
+        hash = 67 * hash + Objects.hashCode(this.apellido);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Alumno other = (Alumno) obj;
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        return Objects.equals(this.apellido, other.apellido);
+    }
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "nombre=" + nombre + ", apellido=" + apellido + ", notaConcep=" + notaConcep + ", examen1=" + examen1 + ", examen2=" + examen2 + ", examen3=" + examen3 + ", notaFinal=" + notaFinal + '}';
+    }
+    
     
     
     
