@@ -35,7 +35,6 @@ public class Array00 {
     public void remove(int indice){
         //Crear nuevoArray con length = array.length - 1
         int [] nuevoArray = new int[array.length - 1]; 
-        
         //Copiar todos los valores menos indice
         int indiceAux = 0;
         for (int i = 0; i < array.length; i++) {
@@ -44,7 +43,6 @@ public class Array00 {
                 indiceAux++;
             }
         }
-        
         //Sobreescribir el array con nuevoArray
         this.array = nuevoArray;
     }
