@@ -97,6 +97,6 @@ public class Embarcacion {
 
     @Override
     public String toString() {
-        return "Embarcacion{" + "numero=" + numero + ", nombre=" + nombre + ", tipoembarcion=" + tipoembarcion + ", localidad=" + localidad + ", dimension=" + dimension + ", anioconstruccion=" + anioconstruccion + '}';
+        return "\nEmbarcacion\n" + "Numero:" + numero + ".\nNombre:" + nombre + ".\nTipo de embarcion\n" + tipoembarcion + ".\nLocalidad\n" + localidad + ".\nDimension:" + dimension + ".\nAño de construccion=" + anioconstruccion ;
     }
 }

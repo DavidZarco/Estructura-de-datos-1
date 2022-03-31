@@ -82,19 +82,23 @@ public class ClientePNA {
         Embarcacion embarcacion5 = new Embarcacion(5,"Perla Negra",new TipoEmbarcacion("Velero"),new Localidad("Isla Tortuga"),new Dimension(60.23,76.15,23.30),2003);
         
         Embarcacion [] embarcacionArray = {embarcacion1,embarcacion2,embarcacion3,embarcacion4,embarcacion5};
-        
+        System.out.println("***********");
+        System.out.println("***********");
         System.out.println("***********");
         System.out.println("Todos los elementos del array:");
         imprimir(embarcacionArray);
-            
+        System.out.println("***********");
+        System.out.println("***********");
         System.out.println("***********");
         System.out.println("Todos las embarcaciones anteriores al año: 1980");
         imprimir(filtrarAntiguas(embarcacionArray));    
-        
+        System.out.println("***********");
+        System.out.println("***********");
         System.out.println("***********");
         System.out.println("Todas las embarcaciones filtradas por Eslora máxima:");
         imprimir(filtrarMenores(embarcacionArray,15));
-        
+        System.out.println("***********");
+        System.out.println("***********");
         System.out.println("***********");
         System.out.println("Todos las embarcaciones filtradas por tipo:");
         imprimir(filtrarPorTipo(embarcacionArray,new TipoEmbarcacion("Velero")));

@@ -49,6 +49,6 @@ public class Localidad {
 
     @Override
     public String toString() {
-        return "Localidad{" + "nombreLocal=" + nombreLocal + '}';
+        return  "Nombre Local:" + nombreLocal ;
     }
 }

@@ -49,6 +49,6 @@ public class TipoEmbarcacion {
 
     @Override
     public String toString() {
-        return "TipoEmbarcacion{" + "descripcion=" + descripcion + '}';
+        return  "Descripcion:" + descripcion ;
     }
 }

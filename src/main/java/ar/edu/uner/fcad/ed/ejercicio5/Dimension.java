@@ -75,6 +75,6 @@ public class Dimension {
 
     @Override
     public String toString() {
-        return "Dimension{" + "eslora=" + eslora + ", manga=" + manga + ", puntal=" + puntal + '}';
+        return  "Eslora:" + eslora + ", manga:" + manga + ", puntal:" + puntal ;
     }   
 }
