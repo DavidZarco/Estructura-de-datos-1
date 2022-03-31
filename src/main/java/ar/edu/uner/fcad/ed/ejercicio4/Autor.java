@@ -8,11 +8,13 @@ package ar.edu.uner.fcad.ed.ejercicio4;
  *
  * @author David Zarcó
  */
-public class Marca {
+public class Autor {
     private String nombre;
+    private String apellido;
 
-    public Marca(String nombre) {
+    public Autor(String nombre, String apellido) {
         this.nombre = nombre;
+        this.apellido = apellido;
     }
 
     public String getNombre() {
@@ -23,36 +25,40 @@ public class Marca {
         this.nombre = nombre;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
-        return result;
+        int hash = 5;
+        return hash;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (obj == null)
+        }
+        if (obj == null) {
             return false;
-        if (getClass() != obj.getClass())
+        }
+        if (getClass() != obj.getClass()) {
             return false;
-        Marca other = (Marca) obj;
-        if (nombre == null) {
-            if (other.nombre != null)
-                return false;
-        } else if (!nombre.equals(other.nombre))
+        }
+        final Autor other = (Autor) obj;
+        if (!Objects.equals(this.nombre, other.nombre)) {
             return false;
-        return true;
-    } 
+        }
+        return Objects.equals(this.apellido, other.apellido);
+    }
 
     @Override
     public String toString() {
-        return "" +
-            " nombre=" + getNombre() + "" +
-            "";
-    }
-    
+        return "Autor{" + "nombre=" + nombre + ", apellido=" + apellido + '}';
+    } 
 }

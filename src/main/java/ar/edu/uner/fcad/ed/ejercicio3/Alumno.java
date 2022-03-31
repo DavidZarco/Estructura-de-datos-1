@@ -1,10 +1,7 @@
 
 package ar.edu.uner.fcad.ed.ejercicio3;
 
-/**
- *
- * @author stefa
- */
+
 public class Alumno {
     private String nombre, apellido, notaConcep;
     private int examen1,examen2,examen3,notaFinal;
