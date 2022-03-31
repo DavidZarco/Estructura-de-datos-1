@@ -4,10 +4,13 @@
  */
 package ar.edu.uner.fcad.ed.ejercicio4;
 
+import java.util.Objects;
+
 /**
  *
  * @author David Zarcó
  */
+
 public class Autor {
     private String nombre;
     private String apellido;
