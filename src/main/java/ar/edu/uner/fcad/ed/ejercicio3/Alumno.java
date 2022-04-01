@@ -72,6 +72,29 @@ public class Alumno {
         if(examen1==10 && examen2==10 && examen3==10){
             notaFinal = 10;
         }
+        switch(notaFinal){
+            case 1,2,3:
+                notaConcep= "Insuficiente";
+                break;
+            case 4,5:
+                notaConcep= "Regular";
+                break;
+            case 6:
+                notaConcep="Aprobado";
+                break;
+            case 7:
+                notaConcep="Bueno";
+                break;
+            case 8:
+                notaConcep="Muy bueno";
+                break;
+            case 9:
+                notaConcep="Distinguido";
+                break;
+            case 10:
+                notaConcep="Excelente";
+                break;
+        }
     }
 
     @Override
