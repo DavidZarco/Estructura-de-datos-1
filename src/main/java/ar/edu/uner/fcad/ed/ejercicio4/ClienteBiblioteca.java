@@ -17,10 +17,11 @@ public class ClienteBiblioteca {
     }
        
     private static Libro [] librosPorCategoria(Libro [] librosArray,Categoria cat){
+        System.out.println(cat);
+        System.out.println("");
           int cantidad =0;
             for (var Libro : librosArray) {
                 if (Libro.getCategoria().equals(cat) ){
-                    
                     cantidad++;   
                 }
             }
@@ -32,10 +33,15 @@ public class ClienteBiblioteca {
                 res[indice++]=Libro;
                 } 
             }
+            if (cantidad == 0) {
+                System.out.println("No se hayan libros de la categoria " + cat);
+            }
             return res;
     }
     
     private static Libro [] librosPorAutor(Libro [] librosArray, Autor autor){
+        System.out.println(autor);
+        System.out.println("");
           int cantidad =0;
             for (var Libro : librosArray) {
                 if (Libro.getAutor().equals(autor)){ 
@@ -50,10 +56,15 @@ public class ClienteBiblioteca {
                     res[indice++]= Libro ; 
                 } 
             }
+            if (cantidad == 0) {
+                System.out.println("No se hayan libros de " + autor );
+            }
         return res;
     }
 
     private static Libro [] librosPorAnio(Libro [] librosArray, int año){
+        System.out.println("Año:"+año);
+        System.out.println("");
         int cantidad =0;
             for (var Libro : librosArray) {
                 if (Libro.getAniopublicacion() == año){  
@@ -66,6 +77,9 @@ public class ClienteBiblioteca {
                 if (Libro.getAniopublicacion() == año){
                     res[indice++]= Libro ; 
                 } 
+            }
+            if (cantidad == 0) {
+                System.out.println("En el año " + año + " no se hayan libros.");
             }
         return res; 
     }
@@ -85,20 +99,20 @@ public class ClienteBiblioteca {
         System.out.println("Todos los elementos del array");
         System.out.println("***********");
         imprimir(librosArray);
-        
+        System.out.println("");
         System.out.println("***********");
-        System.out.println("Todos los libros filtrados por categoria");
-        System.out.println("***********");
+        System.out.println("");
+        System.out.println("Todos los libros filtrados por categoria:");
         imprimir(librosPorCategoria(librosArray,new Categoria("Novela")));
-            
+        System.out.println("");    
         System.out.println("***********");
-        System.out.println("Todos los libros filtrados por autor");
-        System.out.println("***********");
+        System.out.println("");
+        System.out.println("Todos los libros filtrados por autor:");
         imprimir(librosPorAutor(librosArray,new Autor("Sigmund","Freud")));
-            
+        System.out.println("");    
         System.out.println("***********");
-        System.out.println("Todos los libros filtrados por año");
-        System.out.println("***********");
+        System.out.println("");
+        System.out.println("Todos los libros filtrados por año:");
         imprimir(librosPorAnio(librosArray,1659));
     }
 }

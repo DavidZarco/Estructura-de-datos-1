@@ -17,7 +17,8 @@ public class ClienteAlumnos {
         alumnos[4] = new Alumno("Michael","Jackson",2,2,2);
         
         for(int i=0;i<alumnos.length;i++){
-                System.out.println("Alumno "+i+": "+alumnos[i].toString());
+                System.out.println("Alumno "+i+"\n"+alumnos[i].toString());
+                System.out.println("********");
                 }
         
     }

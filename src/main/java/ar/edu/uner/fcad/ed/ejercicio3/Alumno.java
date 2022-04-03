@@ -125,7 +125,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{" + "nombre=" + nombre + ", apellido=" + apellido + ", notaConcep=" + notaConcep + ", examen1=" + examen1 + ", examen2=" + examen2 + ", examen3=" + examen3 + ", notaFinal=" + notaFinal + '}';
+        return "Nombre:" + nombre + ", Apellido:" + apellido + ", Nota Conceptual: " + notaConcep + ", Examen 1=" + examen1 + ", Examen 2=" + examen2 + ", Examen 3=" + examen3 + ", NotaFinal=" + notaFinal;
     }
     
     
