@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package ar.edu.uner.fcad.ed.ejercicio5;
 
-/**
- *
- * @author David Zarcó
- */
 public class ClientePNA {
     
     private static void imprimir(Embarcacion [] param){
@@ -36,6 +29,7 @@ public class ClientePNA {
     }
    
     private static Embarcacion [] filtrarMenores(Embarcacion [] param, int esloraMax){
+        System.out.println("Eslora Maxima:"+esloraMax);
        int cantidad =0;
             for (var Embarcacion : param) {
                 if (Embarcacion.getDimension().getEslora() < esloraMax) {
@@ -54,6 +48,7 @@ public class ClientePNA {
     }
    
     private static Embarcacion [] filtrarPorTipo(Embarcacion [] param, TipoEmbarcacion tipo) {
+        System.out.println(tipo);
     int cantidad =0;
             for (var Embarcacion : param) {
                 if (Embarcacion.getTipoembarcion().equals(tipo)) {
@@ -83,21 +78,19 @@ public class ClientePNA {
         
         Embarcacion [] embarcacionArray = {embarcacion1,embarcacion2,embarcacion3,embarcacion4,embarcacion5};
         System.out.println("***********");
-        System.out.println("***********");
-        System.out.println("***********");
         System.out.println("Todos los elementos del array:");
         imprimir(embarcacionArray);
-        System.out.println("***********");
+        System.out.println("");
         System.out.println("***********");
         System.out.println("***********");
         System.out.println("Todos las embarcaciones anteriores al año: 1980");
-        imprimir(filtrarAntiguas(embarcacionArray));    
-        System.out.println("***********");
+        imprimir(filtrarAntiguas(embarcacionArray));
+        System.out.println("");    
         System.out.println("***********");
         System.out.println("***********");
         System.out.println("Todas las embarcaciones filtradas por Eslora máxima:");
         imprimir(filtrarMenores(embarcacionArray,15));
-        System.out.println("***********");
+        System.out.println("");
         System.out.println("***********");
         System.out.println("***********");
         System.out.println("Todos las embarcaciones filtradas por tipo:");

@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package ar.edu.uner.fcad.ed.ejercicio5;
 
+package ar.edu.uner.fcad.ed.ejercicio5;
 import java.util.Objects;
 
-/**
- *
- * @author David Zarcó
- */
 public class Localidad {
     private String nombreLocal;
 
