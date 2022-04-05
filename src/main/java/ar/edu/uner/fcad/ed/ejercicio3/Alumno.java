@@ -65,10 +65,10 @@ public class Alumno {
         return notaFinal;
     }
     private void calcularNotaFinal(){
-            double ex1 = (examen1*0.25);
+        double ex1 = (examen1*0.25);
         double ex2 = (examen2*0.30);
         double ex3 = (examen3*0.45);
-        notaFinal = (int) Math.ceil(ex1+ex2+ex3);      
+        notaFinal = (int) Math.ceil(ex1+ex2+ex3);     
         switch(notaFinal){
             case 1,2,3:
                 notaConcep= "Insuficiente";
